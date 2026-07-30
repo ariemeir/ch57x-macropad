@@ -1,0 +1,46 @@
+{
+  "title": "Macropad Scripts",
+  "rules": [
+    {
+      "description": "Macropad → scripts",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": { "key_code": "f20" },
+          "to": [{ "shell_command": "/Users/ariemeir/dev/diy/home_automation/ch57x-keyboard/left.sh" }],
+          "conditions": [{ "type": "device_if", "identifiers": [{ "vendor_id": 4489, "product_id": 34960 }] }]
+        },
+        {
+          "type": "basic",
+          "from": { "key_code": "f21" },
+          "to": [{ "shell_command": "/Users/ariemeir/dev/diy/home_automation/ch57x-keyboard/middle.sh" }],
+          "conditions": [{ "type": "device_if", "identifiers": [{ "vendor_id": 4489, "product_id": 34960 }] }]
+        },
+        {
+          "type": "basic",
+          "from": { "key_code": "f22" },
+          "to": [{ "shell_command": "/Users/ariemeir/dev/diy/home_automation/ch57x-keyboard/right.sh" }],
+          "conditions": [{ "type": "device_if", "identifiers": [{ "vendor_id": 4489, "product_id": 34960 }] }]
+        },
+        {
+          "type": "basic",
+          "from": { "key_code": "f23" },
+          "to": [{ "shell_command": "/Users/ariemeir/dev/diy/home_automation/ch57x-keyboard/knob_down.sh" }],
+          "conditions": [{ "type": "device_if", "identifiers": [{ "vendor_id": 4489, "product_id": 34960 }] }]
+        },
+        {
+          "type": "basic",
+          "from": { "key_code": "f24" },
+          "to": [{ "shell_command": "/Users/ariemeir/dev/diy/home_automation/ch57x-keyboard/knob_up.sh" }],
+          "conditions": [{ "type": "device_if", "identifiers": [{ "vendor_id": 4489, "product_id": 34960 }] }]
+        },
+        {
+          "type": "basic",
+          "from": { "key_code": "f19" },
+          "to": [{ "shell_command": "/Users/ariemeir/dev/diy/home_automation/ch57x-keyboard/knob_press.sh" }],
+          "conditions": [{ "type": "device_if", "identifiers": [{ "vendor_id": 4489, "product_id": 34960 }] }]
+        }
+      ]
+    }
+  ]
+}

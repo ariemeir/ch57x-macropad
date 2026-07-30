@@ -1,0 +1,11 @@
+orientation: normal
+rows: 1
+columns: 3
+knobs: 1
+layers:
+  - buttons:
+      - ["f20", "f21", "f22"]
+    knobs:
+      - ccw: 'f23'
+        press: 'f19'
+        cw: 'f24'

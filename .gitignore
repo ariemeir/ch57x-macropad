@@ -1,0 +1,9 @@
+# prebuilt tool binary - re-download from GitHub releases
+ch57x-keyboard-tool
+
+# logs
+*.log
+
+# local secrets / env - keep automation creds out of git
+.env
+*.secret
