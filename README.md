@@ -7,6 +7,21 @@ turns those key codes into shell scripts.
 
 Device: USB VID:PID `1189:8890` (decimal `4489:34960`).
 
+## The hardware
+
+**[Mini Keyboard 3 Keys 1 Knob RGB](https://www.aliexpress.us/item/3256806659987911.html)**
+on AliExpress, around 850 JPY at the time of writing. Any CH57x pad with the
+same VID:PID should behave identically; this is simply the one this setup was
+built and tested against.
+
+<p align="center">
+  <img src="docs/images/aliexpress-listing.png" width="860"
+       alt="The AliExpress listing for a 3-key, 1-knob mechanical macropad in black and beige, with the product itself outlined in a blue box.">
+  <br>
+  <em>The exact pad, boxed in blue. Three mechanical keys, one rotary knob,
+  USB-C, and RGB nobody asked for.</em>
+</p>
+
 ## How it works
 
 Two layers, deliberately kept separate:
