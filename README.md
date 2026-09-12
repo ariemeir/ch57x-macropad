@@ -1,30 +1,29 @@
 # ch57x Macropad
 
-Setup for a cheap AliExpress 3-key + 1-knob macropad (CH57x-based) on macOS.
-The vendor config software is Windows-only, so this repo replaces it: an
-open-source flasher writes plain key codes into the pad, and Karabiner-Elements
-turns those key codes into shell scripts.
+How to set up a low-cost AliExpress 3-key and 1-knob macropad (CH57x-based) on
+macOS. The vendor configuration software only runs on Windows, so this repo
+replaces it. An open-source flasher writes key codes into the pad, and
+Karabiner-Elements turns those key codes into shell scripts.
 
 Device: USB VID:PID `1189:8890` (decimal `4489:34960`).
 
 ## The hardware
 
 **[Mini Keyboard 3 Keys 1 Knob RGB](https://www.aliexpress.us/item/3256806659987911.html)**
-on AliExpress, around 850 JPY at the time of writing. Any CH57x pad with the
-same VID:PID should behave identically; this is simply the one this setup was
-built and tested against.
+on AliExpress, about 850 JPY. Any CH57x pad with the same VID:PID should work
+the same way. This is the one this setup was built and tested with.
 
 <p align="center">
   <img src="docs/images/aliexpress-listing.png" width="860"
        alt="The AliExpress listing for a 3-key, 1-knob mechanical macropad in black and beige, with the product itself outlined in a blue box.">
   <br>
-  <em>The exact pad, boxed in blue. Three mechanical keys, one rotary knob,
-  USB-C, and RGB nobody asked for.</em>
+  <em>The pad used here, outlined in blue: three mechanical keys, one rotary
+  knob, USB-C, and RGB backlighting.</em>
 </p>
 
 ## How it works
 
-Two layers, deliberately kept separate:
+Two layers, kept separate:
 
 1. **Firmware layer** — the pad is flashed so its buttons and knob emit
    otherwise-unused function keys (F19–F24), nothing more. Done with
@@ -32,8 +31,8 @@ Two layers, deliberately kept separate:
 2. **Mac layer** — Karabiner-Elements catches those F-keys, scoped to this
    device only, and runs a script per key.
 
-Keeping the pad as a dumb "chord emitter" means you change what the keys *do*
-by editing scripts, never by re-flashing.
+Because the pad only sends key codes, you change what a key does by editing a
+script. You do not need to re-flash the pad.
 
 ## Mapping
 
@@ -46,8 +45,9 @@ by editing scripts, never by re-flashing.
 | Knob CW      | F24   | `knob_up.sh`    |
 | Knob press   | F19   | `knob_press.sh` |
 
-F19–F24 are chosen because macOS has no default action bound to them. F13–F15
-are a trap: F14/F15 are legacy brightness keys and macOS grabs them first.
+F19–F24 are used because macOS has no default action bound to them. Avoid
+F13–F15: F14 and F15 are legacy brightness keys, and macOS handles them before
+Karabiner sees them.
 
 ## Flashing the pad
 
@@ -80,16 +80,17 @@ ln -s "$PWD/macropad.json" \
 Enable it once in the UI: Karabiner-Elements → Complex Modifications →
 Add predefined rule → "Macropad → scripts" → Enable.
 
-**Gotcha:** the assets folder is only the *menu*. Enabling copies the rule into
+**Important:** the assets folder is only the menu. Enabling copies the rule into
 `~/.config/karabiner/karabiner.json`, and that copy is what actually runs.
 Editing `macropad.json` here does not auto-apply — either edit
 `karabiner.json` directly (it hot-reloads on save) or remove and re-add the
 rule in the UI.
 
-## Script environment gotcha
+## Writing the scripts
 
-Karabiner runs `shell_command` in a minimal environment: no `.zshrc`, bare
-PATH. Scripts that work in your terminal can silently do nothing here.
+Karabiner runs `shell_command` in a minimal environment: no `.zshrc` and a
+bare PATH. A script that works in your terminal may do nothing here, with no
+error message.
 
 - Use absolute paths for every binary (`/opt/homebrew/bin/...`).
 - No shell env vars — read secrets from a file, don't rely on exported creds.
@@ -97,8 +98,8 @@ PATH. Scripts that work in your terminal can silently do nothing here.
   ```zsh
   exec >> /tmp/macropad.log 2>&1
   ```
-  then `tail -f /tmp/macropad.log` while pressing keys. This distinguishes
-  "never ran" from "ran and failed."
+  then run `tail -f /tmp/macropad.log` while pressing keys. This tells you
+  whether the script never ran, or ran and failed.
 
 ## If Karabiner keys are seen but nothing runs
 
