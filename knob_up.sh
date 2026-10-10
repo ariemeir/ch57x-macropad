@@ -1,4 +1,4 @@
 #!/bin/bash
 #say "knob_up"
- ~/dev/diy/home_automation/elgato/light2 brighten 5
+ ~/dev/diy/gadgets/elgato-lights/light2 brighten 5
 

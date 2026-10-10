@@ -1,4 +1,4 @@
 #!/bin/bash
 #say "knob_press"
-~/dev/diy/home_automation/elgato/light toggle
+~/dev/diy/gadgets/elgato-lights/light toggle
 
