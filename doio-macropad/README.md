@@ -31,3 +31,10 @@ EventViewer works, but modifiers are easy to miss. What worked: a temporary Kara
 scoped to the KB16 with one manipulator per key and per mandatory modifier combo, each
 running `echo <name> >> /tmp/kb16-keys.log`. Don't also map bare modifier keys in that
 logger, or they get eaten and every combo logs as the bare key.
+
+## RGB lighting
+
+Turn it off in VIA: https://usevia.app in Chrome → Authorize device → Lighting → brightness 0 or
+effect None/All Off. Saved on the keyboard. If VIA doesn't recognize it, enable Settings → Show
+Design tab and load DOIO's KB16 JSON. To get a toggle key, assign `RGB_TOG` to a spare key on a
+second layer in the Configure tab.
