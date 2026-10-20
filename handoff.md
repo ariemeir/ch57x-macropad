@@ -4,13 +4,16 @@ Repo: https://github.com/ariemeir/ch57x-macropad (public; holds both pads despit
 Device docs: `ch57x-macropad/README.md`, `doio-macropad/README.md`.
 Live Karabiner config: `~/dev/config/karabiner/` (tracked in the private config repo; `~/.config/karabiner` symlinks to it).
 
-## State (2026-10-20)
+## State (2026-10-21)
 
 - ch57x pad: unchanged behavior; moved from `diy/gadgets/macropad` to `keyboards/ch57x-macropad`.
   All path references updated (live karabiner.json, dictation config, portfolio handoff, projects.json).
 - DOIO KB16: stock firmware, Karabiner rule "DOIO KB16 → scripts" (source `doio-macropad/kb16.json`).
   - Big dial CW / CCW / press (Ctrl+Shift+Z / Ctrl+Z / Ctrl+S) → light2 brighten / dim / toggle. Tested by user.
   - Bottom-left key (`y`) → Hyper+F13, dictation like the foot pedal. Not yet confirmed by user.
+  - Top-right key (`delete_forward`) → `cornerlight toggle` (2026-10-21). Tested: ~1 s.
+    Script: `~/dev/diy/gadgets/tapo-cameras/cornerlight on|off|toggle|state` (P105 at 192.168.1.12,
+    direct kasa KLAP, no Shortcuts needed unlike the laser). Shell alias in `~/dev/config/dotfiles/.zshrc`.
   - Bottom-right key (`t`) → `laser toggle`, logs to `/tmp/kb16-laser.log`. Tested: ~7 s per press.
 - KB16 RGB: turn off via VIA (usevia.app in Chrome) → Lighting → brightness 0 or effect off.
   Stored on the keyboard. May need DOIO's KB16 VIA JSON loaded via the Design tab. Not done yet.

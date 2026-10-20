@@ -145,6 +145,33 @@
               ]
             }
           ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "delete_forward",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "/Users/ariemeir/dev/diy/gadgets/keyboards/doio-macropad/key_top_right.sh"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 53264,
+                  "product_id": 5633
+                }
+              ]
+            }
+          ]
         }
       ]
     }

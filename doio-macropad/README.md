@@ -12,6 +12,7 @@ script per input. Other KB16 keys keep their stock behavior.
 | Dial CW           | Ctrl+Shift+Z     | `dial_cw.sh`          | `light2 brighten`   |
 | Dial CCW          | Ctrl+Z           | `dial_ccw.sh`         | `light2 dim`        |
 | Dial press        | Ctrl+S           | `dial_press.sh`       | `light2 toggle`     |
+| Top-right key     | `delete_forward` | `key_top_right.sh`    | `cornerlight toggle` (office corner lamp plug) |
 | Bottom-left key   | `y`              | (none, key remap)     | dictation: Hyper+F13, same as the foot pedal |
 | Bottom-right key  | `t`              | `key_bottom_right.sh` | `laser toggle` (xtool laser plug), logs to `/tmp/kb16-laser.log` |
 
