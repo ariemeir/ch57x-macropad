@@ -1,5 +1,5 @@
 # prebuilt tool binary - re-download from GitHub releases
-ch57x-keyboard-tool
+ch57x-macropad/ch57x-keyboard-tool
 
 # logs
 *.log

@@ -7,37 +7,37 @@
         {
           "type": "basic",
           "from": { "key_code": "f20" },
-          "to": [{ "shell_command": "/Users/ariemeir/dev/diy/gadgets/macropad/left.sh" }],
+          "to": [{ "shell_command": "/Users/ariemeir/dev/diy/gadgets/keyboards/ch57x-macropad/left.sh" }],
           "conditions": [{ "type": "device_if", "identifiers": [{ "vendor_id": 4489, "product_id": 34960 }] }]
         },
         {
           "type": "basic",
           "from": { "key_code": "f21" },
-          "to": [{ "shell_command": "/Users/ariemeir/dev/diy/gadgets/macropad/middle.sh" }],
+          "to": [{ "shell_command": "/Users/ariemeir/dev/diy/gadgets/keyboards/ch57x-macropad/middle.sh" }],
           "conditions": [{ "type": "device_if", "identifiers": [{ "vendor_id": 4489, "product_id": 34960 }] }]
         },
         {
           "type": "basic",
           "from": { "key_code": "f22" },
-          "to": [{ "shell_command": "/Users/ariemeir/dev/diy/gadgets/macropad/right.sh" }],
+          "to": [{ "shell_command": "/Users/ariemeir/dev/diy/gadgets/keyboards/ch57x-macropad/right.sh" }],
           "conditions": [{ "type": "device_if", "identifiers": [{ "vendor_id": 4489, "product_id": 34960 }] }]
         },
         {
           "type": "basic",
           "from": { "key_code": "f23" },
-          "to": [{ "shell_command": "/Users/ariemeir/dev/diy/gadgets/macropad/knob_down.sh" }],
+          "to": [{ "shell_command": "/Users/ariemeir/dev/diy/gadgets/keyboards/ch57x-macropad/knob_down.sh" }],
           "conditions": [{ "type": "device_if", "identifiers": [{ "vendor_id": 4489, "product_id": 34960 }] }]
         },
         {
           "type": "basic",
           "from": { "key_code": "f24" },
-          "to": [{ "shell_command": "/Users/ariemeir/dev/diy/gadgets/macropad/knob_up.sh" }],
+          "to": [{ "shell_command": "/Users/ariemeir/dev/diy/gadgets/keyboards/ch57x-macropad/knob_up.sh" }],
           "conditions": [{ "type": "device_if", "identifiers": [{ "vendor_id": 4489, "product_id": 34960 }] }]
         },
         {
           "type": "basic",
           "from": { "key_code": "f19" },
-          "to": [{ "shell_command": "/Users/ariemeir/dev/diy/gadgets/macropad/knob_press.sh" }],
+          "to": [{ "shell_command": "/Users/ariemeir/dev/diy/gadgets/keyboards/ch57x-macropad/knob_press.sh" }],
           "conditions": [{ "type": "device_if", "identifiers": [{ "vendor_id": 4489, "product_id": 34960 }] }]
         }
       ]
