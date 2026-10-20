@@ -20,6 +20,9 @@ Live Karabiner config: `~/dev/config/karabiner/` (tracked in the private config 
 
 ## Open
 
+- KB16 stickers (2026-10-21): `doio-macropad/stickers/` has `sticker_test.xcs` and `stickers.xcs`.
+  Run the test first, then set ENGRAVE/CUT in `make_stickers.py` and regenerate. Not run yet.
+
 - Dial step: ~2 events per detent, so ~10% per click. Halve the step in `dial_cw.sh`/`dial_ccw.sh` if 5% wanted.
 - Laser key: no Accessibility or Local Network change needed (all steps verified from Karabiner).
   Earlier 20-40 s delays were likely a slow plug plus overlapping presses; press once and wait.
