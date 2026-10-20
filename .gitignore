@@ -7,3 +7,6 @@ ch57x-macropad/ch57x-keyboard-tool
 # local secrets / env - keep automation creds out of git
 .env
 *.secret
+
+# macOS
+.DS_Store
